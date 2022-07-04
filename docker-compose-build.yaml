@@ -1,0 +1,18 @@
+version: "3"
+services:
+        reverseproxy:
+                build:
+                        context: /home/qudus/cd0354-monolith-to-microservices-project/udagram-reverseproxy
+                image: qudus/reverseproxy
+        backend_user:
+                build:
+                        context: /home/qudus/cd0354-monolith-to-microservices-project/udagram-api-user
+                image: qudus/udacity-restapi-user
+        backend_feed:
+                build:
+                        context: /home/qudus/cd0354-monolith-to-microservices-project/udagram-api-feed
+                image: qudus/udacity-restapi-feed
+        frontend:
+                build:
+                        context: /home/qudus/cd0354-monolith-to-microservices-project/udagram-frontend  
+                image: qudus/udacity-frontend
